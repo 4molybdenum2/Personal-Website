@@ -115,7 +115,7 @@ header {
     .banner-block-right{
       position: absolute;
       display: block;
-      right: 10%;
+      right: 5%;
       padding: 24px 0;
       letter-spacing: 1.1px;
       font-size: 1.8rem;
@@ -124,7 +124,7 @@ header {
       font-family: 'Playfair Display',serif;
       line-height: 1.8;
       @include media("<=tablet") {
-        left: 5%;
+        left: 7%;
       }
     }
   }
@@ -133,7 +133,7 @@ header {
 
 .background-text{
   position: fixed;
-  top: 50%;
+  top: 56vh;
   left: 50%;
   transform: translate(-50%, -65%);
   font-size: 108px;
@@ -144,4 +144,10 @@ header {
     font-size: 72px;
     transform: translate(-50%,-60%);
   }
+}
+
+.about{
+  letter-spacing: 1.1px;
+  font-size: 1rem;
+  line-height: 1.8;
 }
