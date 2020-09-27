@@ -1,11 +1,33 @@
-import React from "react"
-import {AnimatePresence, motion} from "framer-motion"
+import React ,{useEffect} from "react"
+import {AnimatePresence, motion, useAnimation} from "framer-motion"
+import { useInView } from 'react-intersection-observer';
+
 
 
 //Ease
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
+const variants = {
+  visible: { 
+    transition:{delay: 0.6},
+     opacity: 1
+    },
+  hidden: { 
+    opacity: 0}
+}
+
 const Banner = () => {
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   return (
     <>
       <AnimatePresence exitBeforeEnter>
@@ -28,18 +50,23 @@ const Banner = () => {
           <p>KONICHIWA</p>
         </div>
 
-        <div className="about">
-          <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-          when an unknown printer took a galley of type and scrambled it to make a type 
-          specimen book. It has survived not only five centuries, but also the leap into
-          electronic typesetting, remaining essentially unchanged. It was popularised
-          in the 1960s with the release of Letraset sheets containing Lorem Ipsum 
-          passages, and more recently with desktop publishing software like Aldus PageMaker 
-          including versions of Lorem Ipsum.
-          </p>
-        </div>
+        <motion.div  className="about">
+          <motion.p 
+          ref={ref}
+          animate={controls}
+          initial="hidden"
+          variants={variants}
+          >
+           <br></br><br></br>
+            <motion.span>I am Tathagata Paul.</motion.span>
+            <br></br> 
+            <motion.span>I like to create stuff that is <b>beautiful</b> and <b>aesthetic</b>.</motion.span>
+            <br></br>
+            <motion.span>I am an undergraduate pursuing a CSE degree.</motion.span>
+            <br></br> 
+            <motion.span>As a hobby I like to listen to music and play games.</motion.span>
+          </motion.p>
+        </motion.div>
       </AnimatePresence>
     </>
   )
