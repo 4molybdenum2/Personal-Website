@@ -1,6 +1,6 @@
 import React from "react"
 import "../styles/styles.scss"
-
+import SEO from "../components/SEO"
 //Import Components
 import Header from "../components/header"
 import Banner from "../components/banner"
@@ -25,6 +25,7 @@ const IndexPage = () => (
           animate={{ opacity: 1 }}
           transition={transition}
         >
+          <SEO title="Home"/>
           <Header />
           <Banner />
         </motion.div>

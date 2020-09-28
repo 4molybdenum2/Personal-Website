@@ -1,8 +1,9 @@
 import React ,{useEffect} from "react"
 import {AnimatePresence, motion, useAnimation} from "framer-motion"
 import { useInView } from 'react-intersection-observer';
-
-
+import {Link} from "gatsby";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {faGithub, faTwitter} from "@fortawesome/free-brands-svg-icons";
 
 //Ease
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
@@ -15,6 +16,8 @@ const variants = {
   hidden: { 
     opacity: 0}
 }
+
+
 
 const Banner = () => {
 
@@ -50,13 +53,12 @@ const Banner = () => {
           <p>KONICHIWA</p>
         </div>
 
-        <motion.div  className="about">
-          <motion.p 
-          ref={ref}
-          animate={controls}
-          initial="hidden"
-          variants={variants}
-          >
+        <motion.div
+        ref={ref}
+        animate={controls}
+        initial="hidden"
+        variants={variants}  className="about">
+          <motion.p>
            <br></br><br></br>
             <motion.span>I am Tathagata Paul.</motion.span>
             <br></br> 
@@ -65,7 +67,15 @@ const Banner = () => {
             <motion.span>I am an undergraduate pursuing a CSE degree.</motion.span>
             <br></br> 
             <motion.span>As a hobby I like to listen to music and play games.</motion.span>
+            <br></br>
+            <motion.span>molybdenum is just a nickname :)</motion.span>
           </motion.p>
+
+          <motion.div >
+            <a href="https://github.com/4molybdenum2"><FontAwesomeIcon icon={faGithub}/></a> &nbsp;
+            <a href="https://twitter.com/TathagataPaul11"><FontAwesomeIcon icon={faTwitter}/></a>
+          </motion.div>
+
         </motion.div>
       </AnimatePresence>
     </>

@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import { motion, AnimatePresence } from "framer-motion"
 
+import "../styles/styles.scss"
 //Hooks
 import useWindowSize from "../hooks/useWindowSize"
 
