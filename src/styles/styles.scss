@@ -11,6 +11,12 @@ $black: #000;
 $maroon: #83333e;
 $off-white: #f2f4f5;
 
+main{
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
 html,
 body {
   height: 100%;
@@ -88,6 +94,9 @@ header {
         letter-spacing: 1.5px;
         color: $black;
       }
+      @include media("<=tablet"){
+        padding-left: 24px;
+      }
     }
     .navigation {
       nav {
@@ -104,7 +113,13 @@ header {
           }
         }
       }
+      @include media("<=tablet"){
+        padding-right: 24px;
+      }
     }
+  }
+
+  @include media("<=tablet"){
   }
 }
 
@@ -115,7 +130,8 @@ header {
   pointer-events: none;
   .container{
     .banner-block-left{
-      position: relative;
+      position: absolute;
+      top: 3%;
       left: 5%;
       padding: 24px 0;
       letter-spacing: 1.1px;
@@ -124,11 +140,16 @@ header {
       font-weight: 300;
       font-family: 'Playfair Display',serif;
       line-height: 1.8;
+
+      @include media("<=tablet"){
+        font-size: 1.2rem;
+      }
     }
     
     .banner-block-right{
       position: absolute;
       display: block;
+      bottom: 7.5%;
       right: 5%;
       padding: 24px 0;
       letter-spacing: 1.1px;
@@ -138,31 +159,39 @@ header {
       font-family: 'Playfair Display',serif;
       line-height: 1.8;
       @include media("<=tablet") {
-        left: 7%;
+        font-size: 1.2rem;
       }
     }
   }
-
-}
-
-.background-text{
-  position: fixed;
-  top: 56vh;
-  left: 50%;
-  transform: translate(-50%, -65%);
-  font-size: 108px;
-  text-align: center;
-  color: gray;
-  opacity: 0.3;
-  @include media("<=tablet") {
-    font-size: 72px;
-    transform: translate(-50%,-60%);
+  .background-text{
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%,-65%);
+    font-size: 108px;
+    text-align: center;
+    color: gray;
+    opacity: 0.3;
+    @include media("<=tablet") {
+      font-size: 2.0rem;
+      transform: translate(-50%,-75%);
+    }
+  
+    @include media("<=phone"){
+      font-size: 1.2rem;
+    }
   }
 }
+
+
 
 .about{
   letter-spacing: 1.1px;
   font-size: 1rem;
   line-height: 1.8;
   padding-bottom: 15%;
+
+  @include media("<=tablet"){
+    padding: 24px;
+  }
 }
