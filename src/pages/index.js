@@ -1,6 +1,6 @@
 import React from "react"
 import "../styles/styles.scss"
-import SEO from "../components/SEO"
+import SEO from "../components/seo"
 //Import Components
 import Header from "../components/header"
 import Banner from "../components/banner"

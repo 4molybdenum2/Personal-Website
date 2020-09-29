@@ -47,11 +47,10 @@ const Banner = () => {
                 </motion.p>
               </motion.div>
             </motion.div>
+            <div className="background-text">
+              <p>KONICHIWA</p>
+            </div>
         </motion.div>
-
-        <div className="background-text">
-          <p>KONICHIWA</p>
-        </div>
 
         <motion.div
         ref={ref}

@@ -15,7 +15,7 @@ export default function Template({ data }) {
           <Helmet title={`Your Blog Name - ${post.frontmatter.title}`} />
           <div className="blog-post">
             <div className="heading">
-              <h1>{post.frontmatter.title}</h1>
+              <h2>{post.frontmatter.title}</h2>
               <Link to="/blog"><p>CLOSE</p></Link>
               </div>
             <div 
