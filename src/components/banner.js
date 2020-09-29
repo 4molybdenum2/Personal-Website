@@ -43,7 +43,7 @@ const Banner = () => {
               </motion.div>
               <motion.div initial={{ y: "20%" }} animate={{ y: 0 }} transition={transition}className="banner-block-right">
                 <motion.p>
-                  I am an undergraduate<br></br> pursuing Bachelor in <br></br>Computer Science degree.
+                  I am an undergraduate<br></br> pursuing bachelor's degree in <br></br>Computer Science.
                 </motion.p>
               </motion.div>
             </motion.div>
@@ -65,7 +65,7 @@ const Banner = () => {
             <br></br>
             <motion.span>I am an undergraduate pursuing a CSE degree.</motion.span>
             <br></br> 
-            <motion.span>As a hobby I like to listen to music and play games.</motion.span>
+            <motion.span>My hobbies include listening to music and playing games.</motion.span>
             <br></br>
             <motion.span>molybdenum is just a nickname :)</motion.span>
           </motion.p>
