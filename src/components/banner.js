@@ -72,7 +72,7 @@ const Banner = () => {
 
           <motion.div >
             <a href="https://github.com/4molybdenum2"><FontAwesomeIcon icon={faGithub}/></a> &nbsp;
-            <a href="https://twitter.com/TathagataPaul11"><FontAwesomeIcon icon={faTwitter}/></a>
+            <a href="https://twitter.com/4molybdenum2"><FontAwesomeIcon icon={faTwitter}/></a>
           </motion.div>
 
         </motion.div>
